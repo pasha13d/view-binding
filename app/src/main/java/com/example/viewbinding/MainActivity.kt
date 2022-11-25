@@ -22,10 +22,12 @@ class MainActivity : AppCompatActivity() {
 //        val inputText = findViewById<EditText>(R.id.etName)
 //        val submitBtn = findViewById<Button>(R.id.btnSubmit)
 
-        binding.btnSubmit.setOnClickListener {
-            val name = binding.etName.text.toString()
-            binding.tvMessage.text = "Hello! $name"
-            binding.etName.setText("")
+        binding.apply {
+            btnSubmit.setOnClickListener {
+                val name = etName.text.toString()
+                tvMessage.text = "Hello! $name"
+                etName.setText("")
+            }
         }
     }
 }
